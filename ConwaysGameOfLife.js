@@ -81,9 +81,6 @@ function draw(){
         let cellX = map(liveCells[i].x, viewport[0].x, viewport[1].x, 0, width)-getCellSize()[0]/2;
         let cellY = height-map(liveCells[i].y, viewport[0].y, viewport[1].y, 0, height)-getCellSize()[1]/2;
         
-        if(cellX+getCellSize()[0] < 0 || cellX > width) continue;
-        if(cellY+getCellSize()[1] < 0 || cellY > height) continue;
-        
         rect(cellX, cellY, getCellSize()[0], getCellSize()[1]);
     }
 
